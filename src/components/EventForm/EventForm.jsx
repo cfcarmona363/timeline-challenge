@@ -8,6 +8,7 @@ import {
   SCInputWrapper,
   SCButton,
   SCHeader,
+  SCTitle,
 } from "./style";
 import CloseButton from "../CloseButton/CloseButton";
 
@@ -77,7 +78,7 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
           <CloseButton onClick={onClick} />
         </SCHeader>
         <SCForm onSubmit={handleSubmit}>
-          <h3>NEW EVENT</h3>
+          <SCTitle>NEW EVENT</SCTitle>
           <SCInputWrapper>
             <label htmlFor="name">Name:</label>
             <SCInput

@@ -1,11 +1,13 @@
 import getDaysBeteenDates from "../../utils/getDaysBetweenDates";
 import getLimitDates from "../../utils/getLimitDates";
 import DeleteButton from "../DeleteButton/DeleteButton";
+import EditButton from "../EditButton/EditButton";
 import {
   SCTimelineContainer,
   SCTimelineItem,
   SCTimeLineItemContainer,
   SCHeader,
+  SCButtonWrapper,
 } from "./styles";
 
 const VerticalTimeline = ({ events, setSelectedEvent, deleteEvent }) => {
@@ -24,10 +26,11 @@ const VerticalTimeline = ({ events, setSelectedEvent, deleteEvent }) => {
           end={getDaysBeteenDates(limitDates.limitDateStart, event.end) + 1}
         >
           <SCHeader>
-            <DeleteButton onClick={() => deleteEvent(event)} />
-            <SCTimelineItem onClick={() => setSelectedEvent(event)}>
-              {event.name}
-            </SCTimelineItem>
+            <SCButtonWrapper>
+              <EditButton onClick={() => setSelectedEvent(event)} />
+              <DeleteButton onClick={() => deleteEvent(event)} />
+            </SCButtonWrapper>
+            <SCTimelineItem>{event.name}</SCTimelineItem>
           </SCHeader>
         </SCTimeLineItemContainer>
       ))}

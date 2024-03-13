@@ -3,7 +3,7 @@ export const SCAddEventModal = styled.div`
   background-color: #fefefe;
   color: #490b3e;
   margin: 15% auto;
-  padding: 5px 0 10px 0;
+  padding: 5px 0 30px 0;
   width: 430px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   z-index: 11;
@@ -30,12 +30,6 @@ export const SCForm = styled.form`
   flex-direction: column;
   justify-content: center;
   width: 70%;
-
-  div {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
 `;
 
 export const SCButtonWrapper = styled.div`
@@ -62,6 +56,7 @@ export const SCButton = styled.button`
   background-color: #d4492a;
   color: #fefefe;
   width: 100%;
+  margin-top: 10px;
 `;
 
 export const SCHeader = styled.div`
@@ -71,4 +66,8 @@ export const SCHeader = styled.div`
   width: 100%;
   justify-content: end;
   border-radius: 20px;
+`;
+
+export const SCTitle = styled.div`
+  font-weight: 600;
 `;

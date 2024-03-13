@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SCDeleteButton = styled.button`
+export const SCDEditButton = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: end;

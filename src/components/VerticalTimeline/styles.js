@@ -27,7 +27,13 @@ export const SCTimeLineItemContainer = styled.div`
 export const SCHeader = styled.div`
   background-color: #490b3e;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   position: sticky;
   top: 0;
+`;
+
+export const SCButtonWrapper = styled.div`
+  display: flex;
+  justify-content: end;
+  gap: 10px;
 `;
