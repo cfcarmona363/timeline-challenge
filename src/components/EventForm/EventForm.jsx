@@ -4,7 +4,12 @@ import {
   SCAddEventModal,
   SCForm,
   SCButtonWrapper,
+  SCInput,
+  SCInputWrapper,
+  SCButton,
+  SCHeader,
 } from "./style";
+import CloseButton from "../CloseButton/CloseButton";
 
 const defaultValue = {
   name: "",
@@ -18,7 +23,6 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     let formattedValue = value;
-    debugger;
     if (name === "start" || name === "end") {
       const numericValue = value.replace(/\D/g, "");
       if (
@@ -69,11 +73,14 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
   return (
     <SCAddEventModalFallback>
       <SCAddEventModal>
+        <SCHeader>
+          <CloseButton onClick={onClick} />
+        </SCHeader>
         <SCForm onSubmit={handleSubmit}>
           <h3>NEW EVENT</h3>
-          <div>
+          <SCInputWrapper>
             <label htmlFor="name">Name:</label>
-            <input
+            <SCInput
               type="text"
               id="name"
               name="name"
@@ -81,10 +88,10 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
               onChange={handleChange}
               required
             />
-          </div>
-          <div>
+          </SCInputWrapper>
+          <SCInputWrapper>
             <label htmlFor="start">Start:</label>
-            <input
+            <SCInput
               type="text"
               id="start"
               name="start"
@@ -93,10 +100,10 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
               onChange={handleChange}
               required
             />
-          </div>
-          <div>
+          </SCInputWrapper>
+          <SCInputWrapper>
             <label htmlFor="end">End:</label>
-            <input
+            <SCInput
               type="text"
               id="end"
               name="end"
@@ -105,12 +112,9 @@ const EventForm = ({ onClick, addNewEvent, selectedEvent, editEvent }) => {
               onChange={handleChange}
               required
             />
-          </div>
+          </SCInputWrapper>
           <SCButtonWrapper>
-            <button type="submit">Submit</button>
-            <button type="reset" onClick={onClick}>
-              Cancel
-            </button>
+            <SCButton type="submit">Submit</SCButton>
           </SCButtonWrapper>
         </SCForm>
       </SCAddEventModal>

@@ -4,15 +4,15 @@ export const SCMainGrid = styled.div`
   display: grid;
   grid-template-rows: ${({ rows }) => `repeat(${rows}, 1fr)`};
   min-width: 140px;
-  gap: 5px;
+  gap: 8px;
 `;
 
 export const SCGridItem = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: black;
+  background-color: #fefefe;
   padding: 20px;
-  border-radius: 5px;
-  color: white;
+  border-radius: 10px;
+  color: #d4492a;
 `;

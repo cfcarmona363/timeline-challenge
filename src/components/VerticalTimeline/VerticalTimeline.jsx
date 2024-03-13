@@ -5,7 +5,7 @@ import {
   SCTimelineContainer,
   SCTimelineItem,
   SCTimeLineItemContainer,
-  Prueba,
+  SCHeader,
 } from "./styles";
 
 const VerticalTimeline = ({ events, setSelectedEvent, deleteEvent }) => {
@@ -23,12 +23,12 @@ const VerticalTimeline = ({ events, setSelectedEvent, deleteEvent }) => {
           start={getDaysBeteenDates(limitDates.limitDateStart, event.start)}
           end={getDaysBeteenDates(limitDates.limitDateStart, event.end) + 1}
         >
-          <Prueba>
+          <SCHeader>
             <DeleteButton onClick={() => deleteEvent(event)} />
             <SCTimelineItem onClick={() => setSelectedEvent(event)}>
               {event.name}
             </SCTimelineItem>
-          </Prueba>
+          </SCHeader>
         </SCTimeLineItemContainer>
       ))}
     </SCTimelineContainer>
