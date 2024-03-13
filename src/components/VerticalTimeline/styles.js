@@ -22,6 +22,7 @@ export const SCTimeLineItemContainer = styled.div`
   max-width: 150px;
   display: flex;
   flex-direction: column;
+  box-shadow: 3px 3px 0 0 rgb(73 11 62 / 20%);
 `;
 
 export const SCHeader = styled.div`
